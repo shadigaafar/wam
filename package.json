@@ -1,5 +1,5 @@
 {
-  "name": "wam",
+  "name": "react-wam",
   "version": "0.1.0",
   "description": "React UI Component",
   "main": "dist/index.js",
@@ -26,6 +26,10 @@
     "typescript": "^4.7.4",
     "web-vitals": "^2.1.4"
   },
+  "repository": {
+		"type": "git",
+		"url": "https://github.com/shadigaafar/wam"
+	},
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -33,7 +37,7 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "tsup": "tsup src/components/index.tsx README.md"
+    "tsup": "tsup src/components/index.tsx  --sourcemap"
   },
   "browserslist": {
     "production": [
