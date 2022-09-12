@@ -1,7 +1,7 @@
-# Wam و.م
+# React Wam و.م ريأكت
 
 Small React UI Components library
 
 ## Installing
 
-### `npm i wam`
+### `npm i react-wam`
