@@ -18,3 +18,4 @@ export type { TypographyProps } from "./typography";
 export { UnitControl } from "./unit-control";
 export type { UnitControlProps } from "./unit-control";
 export { useTheme } from "@emotion/react";
+export { default as ThemeProvider } from "../contexts/theme-provider";
