@@ -1,4 +1,3 @@
-import { Theme } from "@emotion/react";
 import styled from "@emotion/styled";
 import React, { ButtonHTMLAttributes, forwardRef } from "react";
 import { ColorType } from "../../contexts/theme-provider";
