@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import React, { forwardRef, HTMLAttributes } from "react";
 
-export interface PaperProps extends HTMLAttributes<any> {
+export interface PaperProps extends HTMLAttributes<HTMLDivElement> {
 	children: React.ReactNode;
 	elevation?: number;
 	htmlComponent?: React.ElementType<any> | undefined;
@@ -23,17 +23,15 @@ const StyledPaper = styled.div<PaperProps>`
 	box-shadow: ${(props) => props.theme.shadow(props.elevation)};
 `;
 
-export const Paper = forwardRef(
-	(
-		{ children, elevation, htmlComponent, square }: PaperProps,
-		ref: React.LegacyRef<HTMLDivElement>
-	) => {
+export const Paper = forwardRef<HTMLDivElement, PaperProps>(
+	({ children, elevation, htmlComponent, square, ...props }, ref) => {
 		return (
 			<StyledPaper
 				as={htmlComponent}
 				square={square}
 				ref={ref}
 				elevation={elevation}
+				{...props}
 			>
 				{children}
 			</StyledPaper>
