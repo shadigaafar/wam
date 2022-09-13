@@ -3,6 +3,7 @@
   "version": "0.3.0",
   "description": "React UI Component",
   "main": "dist/index.js",
+  "files": ["dist/"],
   "dependencies": {
     "@emotion/css": "^11.9.0",
     "@emotion/react": "^11.9.3",
