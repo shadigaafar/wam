@@ -10,7 +10,7 @@ export interface TypographyProps
 export const Typography = forwardRef<
 	HTMLParagraphElement & HTMLHeadingElement,
 	TypographyProps
->(({ htmlComponent, children, ...props }, ref) => {
+>(({ htmlComponent, children, style, ...props }, ref) => {
 	const Root = htmlComponent
 		? htmlComponent
 		: ("p" as React.ElementType<any>);
@@ -24,6 +24,7 @@ export const Typography = forwardRef<
 					props.variant === "secondary"
 						? theme.pallette.text.secondary
 						: theme.pallette.text.primary,
+				...style,
 			}}
 		>
 			{children}
