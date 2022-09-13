@@ -58,6 +58,7 @@ export const List = ({
 	htmlComponent,
 	border = false,
 	square = true,
+	style,
 }: ListProps) => {
 	const handleClickItem =
 		(index: number) =>
@@ -69,7 +70,7 @@ export const List = ({
 		? htmlComponent
 		: ("div" as React.ElementType<any>);
 	return (
-		<Root>
+		<Root style={style}>
 			<StyledList border={border} square={square}>
 				{items.map((item, index) => (
 					<Item key={index}>
