@@ -16,11 +16,12 @@ export const Primary = Template.bind({});
 export const Secondary = Template.bind({});
 export const PrimarySmall = Template.bind({});
 Primary.args = {
-	variant: "primary",
+	variant: "inherit",
+	textPriority: "primary",
 };
 
 Secondary.args = {
-	variant: "secondary",
+	variant: "h1",
 };
 PrimarySmall.args = {
 	htmlComponent: "small",

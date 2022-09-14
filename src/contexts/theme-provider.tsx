@@ -110,6 +110,12 @@ declare module "@emotion/react" {
 				fontSize: string;
 				lineHeight: number;
 			};
+			inherit: {
+				fontFamily: "inherit";
+				fontWeight: "inherit";
+				fontSize: "inherit";
+				lineHeight: "inherit";
+			};
 		};
 	}
 }
@@ -247,6 +253,12 @@ const theme: Theme = {
 			fontWeight: 500,
 			fontSize: "0.875rem",
 			lineHeight: 1.75,
+		},
+		inherit: {
+			fontFamily: "inherit",
+			fontWeight: "inherit",
+			fontSize: "inherit",
+			lineHeight: "inherit",
 		},
 	},
 };
