@@ -1,3 +1,4 @@
+import { forwardRef } from "react";
 import Paper from "../paper";
 import { PaperProps } from "../paper";
 import styled from "@emotion/styled";
@@ -17,17 +18,20 @@ const Bar = styled(Paper)<{ position: AppBarProps["position"] }>`
 	color: ${(props) => props.theme.pallette.primary.contrastText};
 `;
 
-const AppBar = ({ children, position, ...props }: AppBarProps) => {
-	return (
-		<Bar
-			square={true}
-			elevation={5}
-			position={position ? position : "static"}
-			{...props}
-		>
-			{children}
-		</Bar>
-	);
-};
+export const AppBar = forwardRef<HTMLDivElement, AppBarProps>(
+	({ children, position, ...props }, ref) => {
+		return (
+			<Bar
+				square={true}
+				elevation={5}
+				position={position ? position : "static"}
+				ref={ref}
+				{...props}
+			>
+				{children}
+			</Bar>
+		);
+	}
+);
 
 export default AppBar;

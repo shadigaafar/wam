@@ -21,3 +21,5 @@ export { useTheme } from "@emotion/react";
 export { default as ThemeProvider } from "../contexts/theme-provider";
 export { default as styled } from "@emotion/styled";
 export { css } from "@emotion/css";
+export { AppBar } from "./appBar";
+export type { AppBarProps } from "./appBar";
