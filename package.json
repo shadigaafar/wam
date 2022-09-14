@@ -1,6 +1,6 @@
 {
   "name": "react-wam",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "React UI Component",
   "main": "dist/index.js",
   "files": [
