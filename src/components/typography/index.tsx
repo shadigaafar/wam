@@ -15,7 +15,7 @@ export interface TypographyProps
 		| "h6"
 		| "button"
 		| "inherit";
-	textPriority?: "primary" | "secondary";
+	textPriority?: "primary" | "secondary" | "inherit";
 }
 
 interface RootProps
@@ -46,6 +46,8 @@ export const Typography = forwardRef<
 				className={`${css`
 					color: ${textPriority === "secondary"
 						? theme.pallette.text.secondary
+						: textPriority === "inherit"
+						? "inherit"
 						: theme.pallette.text.primary};
 					${(theme.typography as any)?.[
 						variant ? variant : "inherit"
