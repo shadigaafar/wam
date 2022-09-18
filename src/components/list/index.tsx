@@ -3,8 +3,9 @@ import React, { ReactElement, HTMLAttributes } from "react";
 
 export interface ListProps extends HTMLAttributes<HTMLDivElement> {
 	items: {
+		onClick?: React.MouseEventHandler<HTMLButtonElement>;
 		icon?: ReactElement;
-		text: string;
+		text?: string;
 	}[];
 	onClickItem?: (
 		index: number,
@@ -54,27 +55,21 @@ const Button = styled.button`
 `;
 export const List = ({
 	items,
-	onClickItem,
 	htmlComponent,
 	border = false,
 	square = true,
 	style,
+	...rest
 }: ListProps) => {
-	const handleClickItem =
-		(index: number) =>
-		(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-			if (onClickItem) onClickItem(index, e);
-		};
-
 	const Root = htmlComponent
 		? htmlComponent
 		: ("div" as React.ElementType<any>);
 	return (
-		<Root style={style}>
+		<Root style={style} {...rest}>
 			<StyledList border={border} square={square}>
 				{items.map((item, index) => (
 					<Item key={index}>
-						<Button onClick={handleClickItem(index)}>
+						<Button onClick={item.onClick}>
 							{item.icon}
 							{item.text}
 						</Button>
