@@ -14,6 +14,9 @@ export const Primary = Template.bind({});
 
 const items = [
 	{
+		onClickItem: () => {
+			console.log("clicked");
+		},
 		icon: <AiOutlineSend></AiOutlineSend>,
 		text: "Item 1",
 	},
